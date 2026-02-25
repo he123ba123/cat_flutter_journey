@@ -1,3 +1,4 @@
 class Routes {
-  static const String onboarding = '/onboarding';
+  static const String productsScreen = '/productsScreen';
+  static const String productDetailsScreen = '/productDetailsScreen';
 }

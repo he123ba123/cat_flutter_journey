@@ -43,4 +43,11 @@ class AppTextStyles {
     fontFamily: AppFonts.cairo,
     letterSpacing: 0.5.sp,
   );
+
+  static TextStyle font14SemiBold = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    fontFamily: AppFonts.cairo,
+    letterSpacing: 0.5.sp,
+  );
 }
