@@ -1,4 +1,5 @@
 import 'package:cat_flutter_journey/core/utils/common_imports.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomButton extends StatelessWidget {
   final VoidCallback? onPressed;
@@ -20,11 +21,13 @@ class CustomButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.primary500,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-        minimumSize: const Size(double.maxFinite, 50),
+        backgroundColor: AppColors.primary200,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12.r),
+        ),
+        minimumSize: Size(double.maxFinite, 50.h),
       ),
-      child: child ?? Text(title!, style: AppTextStyles.font12Regular),
+      child: child ?? Text(title!, style: AppTextStyles.font15RegularWhite),
     );
   }
 }

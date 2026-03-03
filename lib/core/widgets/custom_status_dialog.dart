@@ -64,7 +64,7 @@ class CustomStatusDialog extends StatelessWidget {
             // Title
             Text(
               title,
-              style: AppTextStyles.font20BlackBold,
+              style: AppTextStyles.font15Bold,
               textAlign: TextAlign.center,
             ),
             12.ph,
@@ -72,7 +72,7 @@ class CustomStatusDialog extends StatelessWidget {
             // Message
             Text(
               message,
-              style: AppTextStyles.font14BlackRegular,
+              style: AppTextStyles.font15RegularGrey,
               textAlign: TextAlign.center,
             ),
             24.ph,

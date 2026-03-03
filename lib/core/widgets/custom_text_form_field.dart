@@ -43,14 +43,14 @@ class CustomTextFormField extends StatelessWidget {
       onChanged: onChanged,
       enabled: enabled,
       maxLines: maxLines,
-      style: AppTextStyles.font16BlackRegular,
+      style: AppTextStyles.font15Regular,
       decoration: InputDecoration(
         hintText: hintText,
         labelText: labelText,
-        labelStyle: AppTextStyles.font14BlackRegular.copyWith(
+        labelStyle: AppTextStyles.font15RegularGrey.copyWith(
           color: AppColors.black.withValues(alpha: 0.6),
         ),
-        hintStyle: AppTextStyles.font14BlackRegular.copyWith(
+        hintStyle: AppTextStyles.font15RegularGrey.copyWith(
           color: AppColors.black.withValues(alpha: 0.4),
         ),
         prefixIcon: prefixIcon,
@@ -77,7 +77,7 @@ class CustomTextFormField extends StatelessWidget {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(borderRadius),
-          borderSide: const BorderSide(color: AppColors.primary500, width: 2),
+          borderSide: const BorderSide(color: AppColors.primary100, width: 2),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(borderRadius),
