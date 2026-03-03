@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "358070163812",
+    "project_id": "catflutterjourney",
+    "storage_bucket": "catflutterjourney.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358070163812:android:a37f4496600e6c160d4271",
+        "android_client_info": {
+          "package_name": "com.example.cat_flutter_journey"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJbJ9woYKmsjo8MT0ROKBTFUT4mCRDloM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

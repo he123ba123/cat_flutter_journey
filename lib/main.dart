@@ -1,9 +1,12 @@
 import 'package:cat_flutter_journey/core/routing/app_router.dart';
+import 'package:cat_flutter_journey/firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   AppRouter.initRouter();
   runApp(const MyApp());
 }
