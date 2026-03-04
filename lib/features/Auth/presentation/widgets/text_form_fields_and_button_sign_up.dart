@@ -1,10 +1,4 @@
-import 'package:cat_flutter_journey/core/routing/routes.dart';
-import 'package:flutter/material.dart';
-import 'package:cat_flutter_journey/core/theme/app_texts/app_text_styles.dart';
-import 'package:cat_flutter_journey/core/widgets/custom_button.dart';
-import 'package:cat_flutter_journey/core/widgets/custom_text_form_field.dart';
-import 'package:cat_flutter_journey/core/helpers/extensions.dart';
-import 'package:go_router/go_router.dart';
+import 'package:cat_flutter_journey/core/utils/common_imports.dart';
 
 class TextFormFieldsAndButtonSignUp extends StatelessWidget {
   TextFormFieldsAndButtonSignUp({super.key});

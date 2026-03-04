@@ -51,6 +51,8 @@ dependencies:
   retrofit_generator: ^10.2.3
   carousel_slider: ^5.1.2
   firebase_core: ^4.5.0
+  firebase_auth: ^6.2.0
+  bloc: ^9.2.0
 
 dev_dependencies:
   flutter_test:

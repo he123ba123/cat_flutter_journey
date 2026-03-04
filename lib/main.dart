@@ -1,3 +1,4 @@
+import 'package:cat_flutter_journey/core/helpers/bloc_observer.dart';
 import 'package:cat_flutter_journey/core/routing/app_router.dart';
 import 'package:cat_flutter_journey/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -8,6 +9,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   AppRouter.initRouter();
+  AppBlocObserver();
+
   runApp(const MyApp());
 }
 
