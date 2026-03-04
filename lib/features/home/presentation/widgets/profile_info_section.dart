@@ -52,7 +52,7 @@ class ProfileInfoSection extends StatelessWidget {
           icon: Icons.lock_outline_rounded,
           label: 'Password',
           value: password,
-          isSecret: true,
+          isSecret: false,
         ),
       ],
     );

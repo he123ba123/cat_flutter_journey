@@ -1,5 +1,5 @@
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:cat_flutter_journey/core/utils/secure_storage_keys.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 class SecureStorageHelper {
   // Create a single instance of FlutterSecureStorage
@@ -8,8 +8,8 @@ class SecureStorageHelper {
   SecureStorageHelper(this._secureStorage);
 
   // Common Keys
-  static const String _tokenKey = SecureStorageKeys.token;
-  static const String _refreshTokenKey = SecureStorageKeys.refreshToken;
+  static const String _emailKey = SecureStorageKeys.email;
+  static const String _passwordKey = SecureStorageKeys.password;
 
   // Write Data
   Future<void> writeData(String key, String value) async {
@@ -31,33 +31,33 @@ class SecureStorageHelper {
     await _secureStorage.deleteAll();
   }
 
-  // Token Helpers
-  Future<void> saveToken(String token) async {
-    await _secureStorage.write(key: _tokenKey, value: token);
+  // Email Helpers
+  Future<void> saveEmail(String email) async {
+    await _secureStorage.write(key: _emailKey, value: email);
   }
 
-  // Get Token
-  Future<String?> getToken() async {
-    return await _secureStorage.read(key: _tokenKey);
+  // Get Email
+  Future<String?> getEmail() async {
+    return await _secureStorage.read(key: _emailKey);
   }
 
-  // Delete Token
-  Future<void> deleteToken() async {
-    await _secureStorage.delete(key: _tokenKey);
+  // Delete Email
+  Future<void> deleteEmail() async {
+    await _secureStorage.delete(key: _emailKey);
   }
 
-  // Refresh Token Helpers
-  Future<void> saveRefreshToken(String token) async {
-    await _secureStorage.write(key: _refreshTokenKey, value: token);
+  // password Helpers
+  Future<void> savePassword(String password) async {
+    await _secureStorage.write(key: _passwordKey, value: password);
   }
 
-  // Get Refresh Token
-  Future<String?> getRefreshToken() async {
-    return await _secureStorage.read(key: _refreshTokenKey);
+  // Get password
+  Future<String?> getPassword() async {
+    return await _secureStorage.read(key: _passwordKey);
   }
 
-  // Delete Refresh Token
-  Future<void> deleteRefreshToken() async {
-    await _secureStorage.delete(key: _refreshTokenKey);
+  // Delete password
+  Future<void> deletePassword() async {
+    await _secureStorage.delete(key: _passwordKey);
   }
 }

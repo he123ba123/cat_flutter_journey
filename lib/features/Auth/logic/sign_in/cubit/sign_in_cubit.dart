@@ -1,5 +1,4 @@
 import 'package:bloc/bloc.dart';
-import 'package:cat_flutter_journey/core/helpers/secure_storage_helper.dart';
 import 'package:cat_flutter_journey/core/helpers/shared_pref_helper.dart';
 import 'package:cat_flutter_journey/core/utils/secure_storage_keys.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -32,8 +31,12 @@ class SignInCubit extends Cubit<SignInState> {
       );
       emit(SignInState.success());
       await SharedPrefHelper.setData(
-        key: SecureStorageKeys.token,
+        key: SecureStorageKeys.email,
         value: firebaseAuth.currentUser!.email,
+      );
+      await SharedPrefHelper.setData(
+        key: SecureStorageKeys.password,
+        value: passwordController.text.trim(),
       );
     } on FirebaseAuthException catch (e) {
       emit(SignInState.error(e.code));

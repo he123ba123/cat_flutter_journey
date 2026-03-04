@@ -1,6 +1,6 @@
 class SecureStorageKeys {
   SecureStorageKeys._();
 
-  static const String token = 'UserToken';
-  static const String refreshToken = 'RefreshToken';
+  static const String email = 'UserEmail';
+  static const String password = 'UserPassword';
 }

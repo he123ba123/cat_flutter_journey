@@ -1,4 +1,5 @@
 import 'package:cat_flutter_journey/core/helpers/bloc_observer.dart';
+import 'package:cat_flutter_journey/core/helpers/shared_pref_helper.dart';
 import 'package:cat_flutter_journey/core/routing/app_router.dart';
 import 'package:cat_flutter_journey/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -10,6 +11,7 @@ void main() async {
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   AppRouter.initRouter();
   AppBlocObserver();
+  await SharedPrefHelper.init();
 
   runApp(const MyApp());
 }
