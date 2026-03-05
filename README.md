@@ -6,6 +6,4 @@
 - [x] Sign In
 - [x] Email Verification
 - [x] Reset Password
-- [ ] Display user data in Home
-- [ ] Google Sign In
-- [ ] Navigation Animations
+- [x] Display user data in Home
