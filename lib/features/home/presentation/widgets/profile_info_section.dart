@@ -6,7 +6,6 @@ class ProfileInfoSection extends StatelessWidget {
   final String lastName;
   final String email;
   final String phone;
-  final String dateOfBirth;
   final String password;
 
   const ProfileInfoSection({
@@ -15,7 +14,6 @@ class ProfileInfoSection extends StatelessWidget {
     required this.lastName,
     required this.email,
     required this.phone,
-    required this.dateOfBirth,
     required this.password,
   });
 

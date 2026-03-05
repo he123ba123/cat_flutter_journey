@@ -19,15 +19,30 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               20.ph,
-              const ProfileHeaderSection(name: 'Heba Tarek'),
+              ProfileHeaderSection(
+                name:
+                    SharedPrefHelper.getString(
+                      key: SecureStorageKeys.firstName,
+                    ) ??
+                    '',
+              ),
               ProfileInfoSection(
-                firstName: 'Heba',
-                lastName: 'Tarek',
+                firstName:
+                    SharedPrefHelper.getString(
+                      key: SecureStorageKeys.firstName,
+                    ) ??
+                    '',
+                lastName:
+                    SharedPrefHelper.getString(
+                      key: SecureStorageKeys.lastName,
+                    ) ??
+                    '',
                 email:
                     SharedPrefHelper.getString(key: SecureStorageKeys.email) ??
                     '',
-                phone: '+201112223333',
-                dateOfBirth: '01 Jan 2000',
+                phone:
+                    SharedPrefHelper.getString(key: SecureStorageKeys.phone) ??
+                    '',
                 password:
                     SharedPrefHelper.getString(
                       key: SecureStorageKeys.password,

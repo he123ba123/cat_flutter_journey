@@ -60,4 +60,55 @@ class SecureStorageHelper {
   Future<void> deletePassword() async {
     await _secureStorage.delete(key: _passwordKey);
   }
+
+  // First Name Helpers
+  Future<void> saveFirstName(String firstName) async {
+    await _secureStorage.write(
+      key: SecureStorageKeys.firstName,
+      value: firstName,
+    );
+  }
+
+  // Get First Name
+  Future<String?> getFirstName() async {
+    return await _secureStorage.read(key: SecureStorageKeys.firstName);
+  }
+
+  // Delete First Name
+  Future<void> deleteFirstName() async {
+    await _secureStorage.delete(key: SecureStorageKeys.firstName);
+  }
+
+  // Last Name Helpers
+  Future<void> saveLastName(String lastName) async {
+    await _secureStorage.write(
+      key: SecureStorageKeys.lastName,
+      value: lastName,
+    );
+  }
+
+  // Get Last Name
+  Future<String?> getLastName() async {
+    return await _secureStorage.read(key: SecureStorageKeys.lastName);
+  }
+
+  // Delete Last Name
+  Future<void> deleteLastName() async {
+    await _secureStorage.delete(key: SecureStorageKeys.lastName);
+  }
+
+  // Phone Helpers
+  Future<void> savePhone(String phone) async {
+    await _secureStorage.write(key: SecureStorageKeys.phone, value: phone);
+  }
+
+  // Get Phone
+  Future<String?> getPhone() async {
+    return await _secureStorage.read(key: SecureStorageKeys.phone);
+  }
+
+  // Delete Phone
+  Future<void> deletePhone() async {
+    await _secureStorage.delete(key: SecureStorageKeys.phone);
+  }
 }
