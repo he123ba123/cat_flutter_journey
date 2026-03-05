@@ -50,7 +50,13 @@ class TextFormFieldsAndButtonSignIn extends StatelessWidget {
                 },
               ),
               15.ph,
-              Text("Forgot Password?", style: AppTextStyles.font15Bold),
+              GestureDetector(
+                onTap: () => context.push(Routes.resetPassword),
+                child: Text(
+                  "Forgot Password?",
+                  style: AppTextStyles.font15Bold,
+                ),
+              ),
               50.ph,
               state is Loading
                   ? const LoadingWidget()

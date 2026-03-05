@@ -1,6 +1,4 @@
 import 'package:bloc/bloc.dart';
-import 'package:cat_flutter_journey/core/helpers/shared_pref_helper.dart';
-import 'package:cat_flutter_journey/core/utils/secure_storage_keys.dart';
 import 'package:cat_flutter_journey/features/Auth/data/models/user_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -47,6 +45,7 @@ class SignUpCubit extends Cubit<SignUpState> {
         return;
       }
       final String uid = userCredential.user!.uid;
+      await userCredential.user!.sendEmailVerification();
       final UserModel userModel = UserModel(
         email: emailController.text.trim(),
         password: passwordController.text.trim(),

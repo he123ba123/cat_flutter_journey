@@ -4,8 +4,8 @@
 - [x] Sign Up with Email & Password
 - [x] Add user to Firestore
 - [x] Sign In
-- [x] Display user data in Home
-- [ ] Email Verification
-- [ ] Reset Password
+- [x] Email Verification
+- [x] Reset Password
+- [ ] Display user data in Home
 - [ ] Google Sign In
 - [ ] Navigation Animations

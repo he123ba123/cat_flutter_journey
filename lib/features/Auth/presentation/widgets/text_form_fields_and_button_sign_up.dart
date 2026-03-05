@@ -9,6 +9,12 @@ class TextFormFieldsAndButtonSignUp extends StatelessWidget {
     return BlocConsumer<SignUpCubit, SignUpState>(
       listener: (context, state) {
         if (state is Success) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              backgroundColor: Colors.green,
+              content: Text('Reset password link sent to your email'),
+            ),
+          );
           context.push(Routes.signin);
         } else if (state is Error) {
           showDialog(
