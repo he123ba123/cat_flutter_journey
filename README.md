@@ -1,4 +1,4 @@
-## Week 2 Tasks – Requirements & Objectives
+## Week 2 
 
 For this week, the goal was to implement the full authentication flow in the app and connect it with Firestore. Each task focuses on a specific feature that demonstrates understanding of Firebase services, user management, and Flutter UI integration.
 
