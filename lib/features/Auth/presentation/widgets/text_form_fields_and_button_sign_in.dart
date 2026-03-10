@@ -9,7 +9,7 @@ class TextFormFieldsAndButtonSignIn extends StatelessWidget {
     return BlocConsumer<SignInCubit, SignInState>(
       listener: (context, state) {
         if (state is Success) {
-          context.push(Routes.home);
+          context.pushReplacement(Routes.todo);
         } else if (state is Error) {
           showDialog(
             context: context,

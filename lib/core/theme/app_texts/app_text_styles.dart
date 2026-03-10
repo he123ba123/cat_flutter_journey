@@ -46,4 +46,12 @@ class AppTextStyles {
     letterSpacing: 0.5.sp,
     color: AppColors.grey600,
   );
+
+  static TextStyle font20Bold = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeightHelper.bold,
+    fontFamily: AppFonts.cairo,
+    letterSpacing: 0.5.sp,
+    color: AppColors.primary100,
+  );
 }

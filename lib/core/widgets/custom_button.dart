@@ -5,12 +5,16 @@ class CustomButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final String? title;
   final Widget? child;
+  final Color? color;
+  final Color? textColor;
 
   const CustomButton({
     super.key,
     required this.onPressed,
     this.title,
     this.child,
+    this.color,
+    this.textColor,
   }) : assert(
          title != null || child != null,
          'Either title or child must be provided',
@@ -21,11 +25,11 @@ class CustomButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.primary200,
+        backgroundColor: color ?? AppColors.primary200,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12.r),
         ),
-        minimumSize: Size(double.maxFinite, 50.h),
+        minimumSize: Size(double.maxFinite, 70.h),
       ),
       child: child ?? Text(title!, style: AppTextStyles.font15RegularWhite),
     );

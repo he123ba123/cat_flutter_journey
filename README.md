@@ -5,10 +5,8 @@ For this week, the goal was to implement the full authentication flow in the app
 ---
 
 ## Checklist
-- [x] Splash Screen
-- [x] Sign Up with Email & Password
-- [x] Add user to Firestore
-- [x] Sign In
 - [x] Email Verification
 - [x] Reset Password
-- [x] Display user data in Home
+- [x] Todos screen ui
+- [ ] Todos screen logic
+- [ ] Google sign-in,

@@ -3,6 +3,7 @@ import 'package:cat_flutter_journey/features/Auth/presentation/screens/reset_pas
 import 'package:cat_flutter_journey/features/Auth/presentation/screens/signin_screen.dart';
 import 'package:cat_flutter_journey/features/Auth/presentation/screens/singup_screen.dart';
 import 'package:cat_flutter_journey/features/home/presentation/screens/home_screen.dart';
+import 'package:cat_flutter_journey/features/todos/presentation/screens/to_do_screen.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
@@ -27,6 +28,10 @@ abstract class AppRouter {
         GoRoute(
           path: Routes.resetPassword,
           builder: (context, state) => const ResetPasswordScreen(),
+        ),
+        GoRoute(
+          path: Routes.todo,
+          builder: (context, state) => const ToDoScreen(),
         ),
       ],
     );
