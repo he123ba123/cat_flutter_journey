@@ -1,4 +1,5 @@
 import 'package:cat_flutter_journey/core/utils/common_imports.dart';
+import 'package:cat_flutter_journey/features/Auth/logic/google_sign_in/cubit/google_signin_cubit.dart';
 import 'package:cat_flutter_journey/features/Auth/logic/sign_in/cubit/sign_in_cubit.dart';
 import 'package:cat_flutter_journey/features/Auth/presentation/widgets/auth_header_section.dart';
 import 'package:cat_flutter_journey/features/Auth/presentation/widgets/text_form_fields_and_button_sign_in.dart';
@@ -9,8 +10,11 @@ class SigninScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => SignInCubit(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => SignInCubit()),
+        BlocProvider(create: (context) => GoogleSigninCubit()),
+      ],
       child: Scaffold(
         backgroundColor: AppColors.white,
         body: SafeArea(
