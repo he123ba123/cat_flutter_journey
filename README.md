@@ -8,5 +8,5 @@ For this week, the goal was to implement the full authentication flow in the app
 - [x] Email Verification
 - [x] Reset Password
 - [x] Todos screen ui
-- [ ] Todos screen logic
+- [x] Todos screen logic
 - [ ] Google sign-in,
